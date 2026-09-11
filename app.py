@@ -3,11 +3,11 @@ import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 
-import data_analysis as da  
-import noi_dung_phan_tich as np_ 
+import data_analysis as da  # <-- module hóa từ notebook: data + hàm thống kê
+import noi_dung_phan_tich as np_  # <-- nội dung phân tích TĨNH do bạn tự viết trong code
 
-ASEAN_COUNTRIES = da.ASEAN_COUNTRIES     
-VN_NAMES = da.VN_COUNTRY_NAMES          
+ASEAN_COUNTRIES = da.ASEAN_COUNTRIES     # iso -> tên tiếng Anh (khớp cột "country" trong df_wide)
+VN_NAMES = da.VN_COUNTRY_NAMES           # iso -> tên tiếng Việt (chỉ dùng để hiển thị)
 COLORS = da.COLORS
 INDICATORS = da.INDICATORS
 
