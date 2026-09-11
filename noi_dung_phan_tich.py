@@ -13,20 +13,5 @@ CH2_SO_SANH = """
 """
 
 CH3_DOC_TUONG_QUAN = """
-*(Hệ số tương quan phía trên có ủng hộ giả thuyết "tài chính toàn diện" của
-bạn không, hay dữ liệu ASEAN cho thấy điều ngược lại / không rõ ràng?)*
-"""
-
-CH3_KET_CHUONG = """
-*(Kết luận chương: dựa trên toàn bộ biểu đồ ở trên, câu trả lời của bạn cho
-câu hỏi nghiên cứu là gì? Nêu rõ giới hạn của dữ liệu nếu có.)*
-"""
-
-KHAI_BAO_AI = """
-*(Ghi rõ bạn đã dùng công cụ AI nào, cho phần việc gì — ví dụ: hỗ trợ viết
-code lấy dữ liệu API, gợi ý bố cục trang; không dùng AI để diễn giải kết luận.)*
-"""
-
-TAI_LIEU_THAM_KHAO_BO_SUNG = """
-*(Thêm các tài liệu tham khảo khác của nhóm vào đây, mỗi nguồn một dòng.)*
+Dữ liệu phân tán trên biểu đồ không ủng hộ một cách rõ ràng cho giả thuyết lạc quan rằng phổ cập Internet và tài chính số sẽ tự động kéo giảm bất bình đẳng thu nhập, mà ngược lại phản ánh một mối liên hệ rất mờ nhạt và mang nặng tính đặc thù quốc gia. Nhìn tổng thể đám mây dữ liệu, các điểm phân bố nằm rải rác theo phương ngang mà không hình thành một đường dốc xuống dứt khoát—vốn là điều kiện cần để minh chứng cho việc tỷ lệ tiếp cận Internet càng cao thì hệ số Gini càng thấp. Thậm chí, giữa các quốc gia có cùng mức thâm nhập Internet, khoảng cách bất bình đẳng vẫn phân hóa sâu sắc: khi tỷ lệ người dùng Internet đạt ngưỡng 50–60%, hệ số Gini của Malaysia vẫn neo ở mức cao (khoảng 41–45 điểm), trong khi Indonesia lại duy trì mức thấp hơn đáng kể (quanh ngưỡng 35–36 điểm). Dấu hiệu cải thiện duy nhất mang tính cục bộ xuất hiện ở Thái Lan, khi đường dữ liệu dốc nhẹ từ mức Gini trên 42 điểm xuống khoảng 33–35 điểm khi độ phủ Internet tiến gần 90%. Thực tế này khẳng định rằng số hóa chỉ đóng vai trò là điều kiện cần về mặt hạ tầng kết nối, chứ không phải là điều kiện đủ để tái phân phối của cải hay thu hẹp khoảng cách giàu nghèo nếu thiếu đi các chính sách an sinh, giáo dục tài chính và phân phối thu nhập thực chất.
 """
