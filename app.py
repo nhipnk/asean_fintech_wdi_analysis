@@ -113,8 +113,6 @@ st.divider()
 # ---------------- Findex + Bank branches ----------------
 st.header("Từ có mạng đến có tài khoản")
 
-story(np_.CH2_MO_DAU)
-
 col_a, col_b = st.columns(2)
 
 with col_a:
