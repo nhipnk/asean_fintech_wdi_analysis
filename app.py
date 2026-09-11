@@ -3,11 +3,11 @@ import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 
-import data_analysis as da  # <-- module hóa từ notebook: data + hàm thống kê
-import noi_dung_phan_tich as np_  # <-- nội dung phân tích TĨNH do bạn tự viết trong code
+import data_analysis as da  
+import noi_dung_phan_tich as np_  
 
-ASEAN_COUNTRIES = da.ASEAN_COUNTRIES     # iso -> tên tiếng Anh (khớp cột "country" trong df_wide)
-VN_NAMES = da.VN_COUNTRY_NAMES           # iso -> tên tiếng Việt (chỉ dùng để hiển thị)
+ASEAN_COUNTRIES = da.ASEAN_COUNTRIES     
+VN_NAMES = da.VN_COUNTRY_NAMES           
 COLORS = da.COLORS
 INDICATORS = da.INDICATORS
 
@@ -69,11 +69,10 @@ with st.spinner("Đang tải / đọc dữ liệu World Bank API…"):
 st.markdown(f"""
 <div class="hero">
   <p class="kicker">Đồ án dữ liệu · World Development Indicators, World Bank</p>
-  <h1>Tài chính số có thu hẹp khoảng cách giàu nghèo ở ASEAN,<br>hay đang mở ra một khoảng cách mới?</h1>
+  <h1>Tài chính số có thu hẹp khoảng cách giàu nghèo ở ASEAN hay đang mở ra một khoảng cách mới?</h1>
   <p style="max-width:62ch;color:#C7D6D2;font-size:1.05rem;">
   Từ 2004 đến 2023, Internet và ví điện tử đã đi vào từng ngóc ngách của Đông Nam Á.
-  Trang này ghép 5 chỉ tiêu WDI của 10 nước ASEAN để đọc lại câu chuyện đó — và để bạn viết
-  phần phân tích của riêng mình ngay bên cạnh từng biểu đồ.</p>
+  Phân tích này ghép 5 chỉ tiêu WDI của 10 nước ASEAN (giai đoạn 2004-2023) để đọc lại câu chuyện đó. </p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -84,8 +83,7 @@ c3.metric("Giai đoạn theo dõi", "2004–2023")
 
 st.divider()
 
-# ---------------- CHƯƠNG 1: Internet ----------------
-st.markdown('<p class="chapter-label">Chương 1</p>', unsafe_allow_html=True)
+# ---------------- Internet ----------------
 st.header("Đông Nam Á lên mạng")
 
 story(np_.CH1_MO_DAU)
@@ -112,8 +110,7 @@ story(np_.CH1_NHAN_XET)
 
 st.divider()
 
-# ---------------- CHƯƠNG 2: Findex + Bank branches ----------------
-st.markdown('<p class="chapter-label">Chương 2</p>', unsafe_allow_html=True)
+# ---------------- Findex + Bank branches ----------------
 st.header("Từ có mạng đến có tài khoản")
 
 story(np_.CH2_MO_DAU)
@@ -168,8 +165,7 @@ story(np_.CH2_SO_SANH)
 
 st.divider()
 
-# ---------------- CHƯƠNG 3: Số hóa & bất bình đẳng ----------------
-st.markdown('<p class="chapter-label">Chương 3</p>', unsafe_allow_html=True)
+# ---------------- Số hóa & bất bình đẳng ----------------
 st.header("Số hóa và bất bình đẳng: cùng chiều hay ngược chiều?")
 
 st.subheader("Internet penetration (%) so với chỉ số Gini")
@@ -278,7 +274,6 @@ st.caption(
 st.divider()
 
 # ---------------- PHƯƠNG PHÁP & DỮ LIỆU ----------------
-st.markdown('<p class="chapter-label">Phương pháp & dữ liệu</p>', unsafe_allow_html=True)
 st.header("Danh sách chỉ tiêu WDI")
 
 st.table(da.build_metadata_table())
@@ -289,16 +284,7 @@ with st.expander("📊 Độ phủ dữ liệu theo nước / chỉ tiêu"):
 
 with st.expander("📊 Thống kê mô tả tổng quan (toàn ASEAN, 2004–2023)"):
     st.dataframe(da.descriptive_stats(df_clean))
-
-st.write(
-    "Dữ liệu trên trang này lấy từ World Bank API (`api.worldbank.org/v2`), dùng chung logic "
-    "tải/làm sạch với notebook `asean_fintech_wdi_analysis.ipynb` (file `data_analysis.py`). "
-    "Nếu đã có `data/raw_wdi_long.csv` (chạy từ notebook trước đó), app sẽ đọc lại từ cache đó "
-    "thay vì gọi API mỗi lần mở trang."
-)
-
-story(np_.KHAI_BAO_AI)
-
+    
 st.divider()
 
 # ---------------- NGUỒN & TÀI LIỆU THAM KHẢO ----------------
@@ -307,10 +293,4 @@ st.markdown(
     "- World Bank. *World Development Indicators.* https://data.worldbank.org/\n"
     "- DataReportal. *Digital 2022: Vietnam.* We Are Social & Kepios, 2022. "
     "https://datareportal.com/reports/digital-2022-vietnam"
-)
-story(np_.TAI_LIEU_THAM_KHAO_BO_SUNG)
-
-st.caption(
-    "Trang dữ liệu này lấy số liệu qua World Bank API (hoặc cache CSV từ notebook). Nếu biểu đồ "
-    "không hiện, hãy kiểm tra kết nối Internet hoặc file cache — không phải do file bị hỏng."
 )
