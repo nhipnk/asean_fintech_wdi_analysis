@@ -1,20 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-noi_dung_phan_tich.py
------------------------
-File NÀY là nơi BẠN viết phần phân tích của mình. Nội dung ở đây là TĨNH —
-nghĩa là bạn sửa trực tiếp trong file này (code), rồi khi mở lại web thì nội
-dung mới sẽ hiển thị cho MỌI người xem — không ai khác sửa được trên web.
-
-Cách dùng: thay chữ bên trong dấu \"\"\" ... \"\"\" của từng biến bằng phân tích
-thật của bạn. Giữ nguyên tên biến (app.py gọi đúng các tên này).
-Có thể xuống dòng thoải mái, dùng markdown (**đậm**, *nghiêng*, - gạch đầu dòng...).
-"""
-
 CH1_MO_DAU = """
-*(Viết phần mở đầu Chương 1 của bạn vào đây — vì sao chủ đề tài chính số ở
-ASEAN đáng chú ý ngay lúc này, và bạn sẽ dẫn dắt người đọc qua dữ liệu như
-thế nào.)*
+Sự bùng nổ của FinTech tại ASEAN được kỳ vọng sẽ thúc đẩy tài chính toàn diện và thu hẹp khoảng cách giàu nghèo thông qua hạ tầng số.
+Tuy nhiên, câu hỏi cốt lõi đặt ra là liệu số hóa thực sự phân phối lại cơ hội kinh tế hay lại đào sâu thêm bất bình đẳng thu nhập?
+Nghiên cứu này khai thác chuỗi dữ liệu WDI (2004–2023) trên 10 quốc gia ASEAN để kiểm chứng thực nghiệm vấn đề trên.
 """
 
 CH1_NHAN_XET = """
