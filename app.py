@@ -3,10 +3,11 @@ import plotly.graph_objects as go
 import plotly.express as px
 import pandas as pd
 
-import data_analysis as da  # <-- module hóa từ notebook: data + hàm thống kê
+import data_analysis as da  
+import noi_dung_phan_tich as np_ 
 
-ASEAN_COUNTRIES = da.ASEAN_COUNTRIES     # iso -> tên tiếng Anh (khớp cột "country" trong df_wide)
-VN_NAMES = da.VN_COUNTRY_NAMES           # iso -> tên tiếng Việt (chỉ dùng để hiển thị)
+ASEAN_COUNTRIES = da.ASEAN_COUNTRIES     
+VN_NAMES = da.VN_COUNTRY_NAMES          
 COLORS = da.COLORS
 INDICATORS = da.INDICATORS
 
@@ -49,8 +50,17 @@ st.markdown(f"""
     .hero h1 {{ font-weight:600; line-height:1.2; }}
     .chapter-label {{ color:{JADE}; font-weight:600; font-size:0.85rem; text-transform:uppercase; }}
     div[data-testid="stMetricValue"] {{ color:{JADE}; }}
+    .story-box {{
+        background:#FFFFFF; border-left:3px solid {JADE}; border-radius:4px;
+        padding:16px 20px; margin:16px 0; color:{INK}; font-size:0.98rem; line-height:1.55;
+    }}
 </style>
 """, unsafe_allow_html=True)
+
+
+def story(markdown_text: str):
+    """Hiển thị 1 đoạn phân tích TĨNH (viết trong noi_dung_phan_tich.py) — không ai sửa được trên web."""
+    st.markdown(f'<div class="story-box">{markdown_text}</div>', unsafe_allow_html=True)
 
 with st.spinner("Đang tải / đọc dữ liệu World Bank API…"):
     df_long, df_clean, df_wide = get_data()
@@ -78,13 +88,7 @@ st.divider()
 st.markdown('<p class="chapter-label">Chương 1</p>', unsafe_allow_html=True)
 st.header("Đông Nam Á lên mạng")
 
-st.text_area(
-    "✍️ Phần phân tích của bạn — mở đầu câu chuyện",
-    placeholder="Vì sao chủ đề tài chính số ở ASEAN đáng chú ý ngay lúc này, và bạn sẽ dẫn dắt "
-                "người đọc qua dữ liệu như thế nào?",
-    key="analysis_ch1_intro",
-    height=100,
-)
+story(np_.CH1_MO_DAU)
 
 st.subheader("Tỷ lệ dân số sử dụng Internet (%)")
 st.caption("World Bank WDI · `IT.NET.USER.ZS` · 2004–2023")
@@ -104,13 +108,7 @@ fig_net.update_layout(
 )
 st.plotly_chart(fig_net, use_container_width=True)
 
-st.text_area(
-    "✍️ Phần phân tích của bạn — nhận xét",
-    placeholder="Nhận xét của bạn về đường đi lên của các nước: nước nào bứt tốc, nước nào tụt "
-                "lại, khoảng cách giữa Singapore và các nước còn lại nói lên điều gì?",
-    key="analysis_ch1_note",
-    height=100,
-)
+story(np_.CH1_NHAN_XET)
 
 st.divider()
 
@@ -118,13 +116,7 @@ st.divider()
 st.markdown('<p class="chapter-label">Chương 2</p>', unsafe_allow_html=True)
 st.header("Từ có mạng đến có tài khoản")
 
-st.text_area(
-    "✍️ Phần phân tích của bạn",
-    placeholder="Internet phổ biến không đồng nghĩa với việc mọi người đã có tài khoản tài "
-                "chính. Bạn nghĩ khoảng trống này đến từ đâu?",
-    key="analysis_ch2_intro",
-    height=100,
-)
+story(np_.CH2_MO_DAU)
 
 col_a, col_b = st.columns(2)
 
@@ -172,13 +164,7 @@ with col_b:
     )
     st.plotly_chart(fig_branch, use_container_width=True)
 
-st.text_area(
-    "✍️ Phần phân tích của bạn — so sánh hai biểu đồ",
-    placeholder="So sánh hai biểu đồ trên: những nước có ít chi nhánh ngân hàng có đang bù lại "
-                "bằng mobile money không, hay đang bị bỏ lại phía sau ở cả hai?",
-    key="analysis_ch2_note",
-    height=100,
-)
+story(np_.CH2_SO_SANH)
 
 st.divider()
 
@@ -211,13 +197,7 @@ if len(scatter_df) > 2:
 else:
     st.warning("Không đủ dữ liệu trùng khớp để tính tương quan.")
 
-st.text_area(
-    "✍️ Phần phân tích của bạn — đọc hệ số tương quan",
-    placeholder="Nó có ủng hộ giả thuyết 'tài chính toàn diện' của bạn không, hay dữ liệu ASEAN "
-                "cho thấy điều ngược lại / không rõ ràng?",
-    key="analysis_ch3_corr",
-    height=100,
-)
+story(np_.CH3_DOC_TUONG_QUAN)
 
 st.subheader("Việt Nam: tăng trưởng GDP đầu người và chỉ số Gini")
 st.caption("`NY.GDP.PCAP.KD.ZG` (trục trái) và `SI.POV.GINI` (trục phải)")
@@ -270,13 +250,7 @@ for idx, (iso, en_name) in enumerate(ASEAN_COUNTRIES.items()):
     with spark_cols[idx % 5]:
         st.plotly_chart(fig_spark, use_container_width=True)
 
-st.text_area(
-    "✍️ Phần phân tích của bạn — kết chương",
-    placeholder="Dựa trên toàn bộ biểu đồ ở trên, câu trả lời của bạn cho câu hỏi nghiên cứu là "
-                "gì? Nêu rõ giới hạn của dữ liệu nếu có.",
-    key="analysis_ch3_end",
-    height=120,
-)
+story(np_.CH3_KET_CHUONG)
 
 st.divider()
 
@@ -323,13 +297,7 @@ st.write(
     "thay vì gọi API mỗi lần mở trang."
 )
 
-st.text_area(
-    "✍️ Khai báo sử dụng AI",
-    placeholder="Ghi rõ bạn đã dùng công cụ AI nào, cho phần việc gì (ví dụ: hỗ trợ viết code "
-                "lấy dữ liệu API, gợi ý bố cục trang, không dùng AI để diễn giải kết luận).",
-    key="analysis_ai_disclosure",
-    height=100,
-)
+story(np_.KHAI_BAO_AI)
 
 st.divider()
 
@@ -340,38 +308,9 @@ st.markdown(
     "- DataReportal. *Digital 2022: Vietnam.* We Are Social & Kepios, 2022. "
     "https://datareportal.com/reports/digital-2022-vietnam"
 )
-st.text_area(
-    "✍️ Thêm tài liệu tham khảo khác của nhóm",
-    placeholder="Mỗi nguồn một dòng…",
-    key="analysis_refs",
-    height=80,
-)
+story(np_.TAI_LIEU_THAM_KHAO_BO_SUNG)
 
 st.caption(
     "Trang dữ liệu này lấy số liệu qua World Bank API (hoặc cache CSV từ notebook). Nếu biểu đồ "
     "không hiện, hãy kiểm tra kết nối Internet hoặc file cache — không phải do file bị hỏng."
 )
-
-# Nút xuất toàn bộ phần phân tích đã viết ra file .md
-st.divider()
-if st.button("📥 Xuất phần phân tích đã viết ra file Markdown"):
-    keys_order = [
-        "analysis_ch1_intro", "analysis_ch1_note", "analysis_ch2_intro", "analysis_ch2_note",
-        "analysis_ch3_corr", "analysis_ch3_end", "analysis_ai_disclosure", "analysis_refs",
-    ]
-    labels = {
-        "analysis_ch1_intro": "Chương 1 — Mở đầu",
-        "analysis_ch1_note": "Chương 1 — Nhận xét",
-        "analysis_ch2_intro": "Chương 2 — Mở đầu",
-        "analysis_ch2_note": "Chương 2 — So sánh hai biểu đồ",
-        "analysis_ch3_corr": "Chương 3 — Đọc hệ số tương quan",
-        "analysis_ch3_end": "Chương 3 — Kết chương",
-        "analysis_ai_disclosure": "Khai báo sử dụng AI",
-        "analysis_refs": "Tài liệu tham khảo bổ sung",
-    }
-    md_lines = ["# Phân tích: Tài chính số & Bất bình đẳng — ASEAN\n"]
-    for k in keys_order:
-        content = st.session_state.get(k, "").strip()
-        md_lines.append(f"## {labels[k]}\n\n{content if content else '_(chưa viết)_'}\n")
-    md_text = "\n".join(md_lines)
-    st.download_button("Tải file phan_tich.md", data=md_text, file_name="phan_tich.md", mime="text/markdown")
