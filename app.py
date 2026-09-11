@@ -84,7 +84,7 @@ c3.metric("Giai đoạn theo dõi", "2004–2023")
 st.divider()
 
 # ---------------- Internet ----------------
-st.header("Đông Nam Á lên mạng")
+st.header("Thực trạng")
 
 story(np_.CH1_MO_DAU)
 
