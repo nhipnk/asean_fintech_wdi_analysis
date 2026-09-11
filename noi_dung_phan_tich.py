@@ -9,9 +9,7 @@ Giai đoạn 2004–2023 chứng kiến sự phân hóa rõ nét về lộ trìn
 """
 
 CH2_SO_SANH = """
-*(So sánh hai biểu đồ Findex và chi nhánh ngân hàng: những nước có ít chi
-nhánh ngân hàng có đang bù lại bằng mobile money không, hay đang bị bỏ lại
-phía sau ở cả hai?)*
+Đối chiếu giữa tỷ lệ sở hữu tài khoản và mật độ chi nhánh ngân hàng làm bộc lộ hai bức tranh đối lập rõ nét về hiện tượng "nhảy cóc" tài chính tại ASEAN. Ở nhóm dẫn đầu gồm Singapore và Thái Lan, mật độ chi nhánh vật lý chỉ ở mức trung bình đến thấp (lần lượt là 6,1 và 8,3 chi nhánh/100.000 dân) nhưng tỷ lệ sở hữu tài khoản lại chạm ngưỡng bão hòa trên 95%, minh chứng cho việc các nền kinh tế này đã số hóa hoàn toàn các kênh giao dịch và không còn phụ thuộc vào mạng lưới gạch - vữa truyền thống. Ngược lại, kịch bản "bị bỏ lại phía sau ở cả hai mặt trận" hiện hữu rõ tại Lào và Myanmar: mật độ chi nhánh thuộc đáy bảng xếp hạng (Lào 2,8; Myanmar 5,8) đi kèm tỷ lệ tiếp cận tài chính rất khiêm tốn (37,3% và 47,8%), cho thấy mobile money hay hạ tầng số tại đây vẫn chưa đủ lực để bù đắp khoảng trống do mạng lưới ngân hàng truyền thống để lại. Đáng chú ý, trường hợp của Campuchia phản ánh một nghịch lý thú vị khi sở hữu mật độ chi nhánh cao thứ hai khu vực (14,2) nhưng tỷ lệ dân số có tài khoản lại thấp nhất nhóm khảo sát (33,4%), khẳng định sự hiện diện vật lý đơn thuần của hệ thống ngân hàng không đồng nghĩa với việc thúc đẩy thành công tài chính toàn diện nếu thiếu đi sự kết nối và chi phí tiếp cận hợp lý cho đại chúng.
 """
 
 CH3_DOC_TUONG_QUAN = """
