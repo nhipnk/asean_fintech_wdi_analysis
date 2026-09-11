@@ -5,13 +5,7 @@ Nghiên cứu này khai thác chuỗi dữ liệu WDI (2004–2023) trên 10 qu�
 """
 
 CH1_NHAN_XET = """
-*(Viết nhận xét của bạn về biểu đồ Internet: nước nào bứt tốc, nước nào tụt
-lại, khoảng cách giữa Singapore và các nước còn lại nói lên điều gì.)*
-"""
-
-CH2_MO_DAU = """
-*(Internet phổ biến không đồng nghĩa với việc mọi người đã có tài khoản tài
-chính — bạn nghĩ khoảng trống này đến từ đâu?)*
+Giai đoạn 2004–2023 chứng kiến sự phân hóa rõ nét về lộ trình phổ cập Internet giữa các nền kinh tế ASEAN. Trong đó, Thái Lan và Brunei ghi nhận mức bứt tốc mạnh mẽ nhất; đặc biệt Brunei tăng vọt sau năm 2013 để tiệm cận ngưỡng bão hòa 100%, trong khi Thái Lan vươn từ dưới 30% năm 2013 lên sát mốc 90% vào năm 2023, tạo đòn bẩy trực tiếp cho các dịch vụ số hóa. Ngược lại, nhóm tụt lại phía sau gồm Lào, Campuchia và Myanmar, vốn duy trì mức tiếp cận gần như bằng không trong giai đoạn đầu và hiện chỉ dao động quanh 60–70%, thậm chí Myanmar còn bị đứt đoạn dữ liệu từ năm 2020 do bất ổn vĩ mô. Đáng chú ý, khoảng cách vượt trội ban đầu của Singapore (>60% ngay từ 2004) so với phần còn lại phản ánh rõ vị thế đi đầu của một trung tâm tài chính phát triển với hạ tầng viễn thông hoàn thiện. Tuy nhiên, việc các quốc gia bám đuổi như Brunei, Malaysia và Thái Lan thu hẹp hoàn toàn cách biệt này sau năm 2016 cho thấy hiện tượng hội tụ số (digital convergence) đang diễn ra mạnh mẽ, đồng thời dịch chuyển tâm điểm cạnh tranh tài chính số từ rào cản kết nối mạng sang năng lực khai thác và chất lượng dịch vụ tài chính thực chất.
 """
 
 CH2_SO_SANH = """
